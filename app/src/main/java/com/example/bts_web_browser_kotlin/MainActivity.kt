@@ -17,6 +17,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        webview = findViewById(R.id.webview)
+
+        webview.loadUrl("")
+        webview.settings.javaScriptEnabled = true // we need to enable javascript
+        webview.canGoBack()
+        webview.webViewClient = WebClient(this)
+
     }
 
 
