@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import android.widget.EditText
 import android.widget.ImageButton
 
 class MainActivity : AppCompatActivity() {
@@ -13,17 +14,22 @@ class MainActivity : AppCompatActivity() {
     lateinit var webview:WebView
     lateinit var searchButton:ImageButton
     lateinit var backButton:ImageButton
+    lateinit var urlText:EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         webview = findViewById(R.id.webview)
+        urlText = findViewById(R.id.url)
+
 
         webview.loadUrl("")
         webview.settings.javaScriptEnabled = true // we need to enable javascript
         webview.canGoBack()
         webview.webViewClient = WebClient(this)
+
+
 
     }
 
