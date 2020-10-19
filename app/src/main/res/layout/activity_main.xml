@@ -21,9 +21,9 @@
             android:id="@+id/back_btn"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:background="@android:color/transparent"
             android:layout_marginRight="8dp"
-            />
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_back_button" />
 
         <EditText
             android:id="@+id/url"
@@ -41,9 +41,9 @@
             android:id="@+id/search_btn"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:background="@android:color/transparent"
             android:layout_marginLeft="8dp"
-            />
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_search_button" />
     </LinearLayout>
 
     <WebView

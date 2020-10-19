@@ -23,13 +23,22 @@ class MainActivity : AppCompatActivity() {
         webview = findViewById(R.id.webview)
         urlText = findViewById(R.id.url)
 
-
-        webview.loadUrl("")
+        webview.loadUrl("https://www.google.com")
         webview.settings.javaScriptEnabled = true // we need to enable javascript
         webview.canGoBack()
         webview.webViewClient = WebClient(this)
 
+        searchButton = findViewById(R.id.search_btn)
+        backButton = findViewById(R.id.back_btn)
 
+        searchButton.setOnClickListener{
+            val url = urlText.text.toString()
+            webview.loadUrl(url)
+        }
+
+        backButton.setOnClickListener {
+            webview.goBack()
+        }
 
     }
 
